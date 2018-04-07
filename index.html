@@ -1,1 +1,41 @@
-hello,world
+<!DOCTYPE html><html><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><meta name=renderer content=webkit><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>脉搏数据网格</title><link rel="shortcut icon" href=/m/favicon.ico><link href=/m/static/css/app.bfdd1a7815647511f3cd273cfec9ff24.css rel=stylesheet></head><body><script>function get_browser_info() {
+        var ua = navigator.userAgent, tem, M = ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
+        if (/trident/i.test(M[1])) {
+          tem = /\brv[ :]+(\d+)/g.exec(ua) || [];
+          return { name: 'IE', version: (tem[1] || '') };
+        }
+        if (M[1] === 'Chrome') {
+          tem = ua.match(/\bOPR\/(\d+)/)
+          if (tem != null) { return { name: 'Opera', version: tem[1] }; }
+        }
+        M = M[2] ? [M[1], M[2]] : [navigator.appName, navigator.appVersion, '-?'];
+        if ((tem = ua.match(/version\/(\d+)/i)) != null) { M.splice(1, 1, tem[1]); }
+        return {
+          name: M[0],
+          version: M[1]
+        };
+      }
+      var browser = get_browser_info();
+      if (browser.name === 'MSIE' && parseInt(browser.version) <= 8) {
+        window.alert('你的浏览器属于古董浏览器'+browser.name+'('+browser.version+'),您将无法使用,请完成更换为"现代浏览器"!')
+        var div = document.createElement('div'),
+          x_div = "<h1>你的浏览器"+browser.name+"("+browser.version+")太老了,本系统您将无法使用</h1>" +
+            "优选chrome(基于chrome开发),以下是谷歌chrome浏览器下载列表:根据系统选择适当的版本</h2><br/><ol>" +
+            "<li><a href='http://10.36.111.213/httpapi/api/frsc/download-chrome-xp?DL=1'>XP系统</a></li>" +
+            "<li><a href='http://10.36.111.213/httpapi/api/frsc/download-chrome-newest-x86?DL=1'>win7以上-32位</a></li>" +
+            "<li><a href='http://10.36.111.213/httpapi/api/frsc/download-chrome-newest-x64?DL=1'>win7以上-64位</a></li></ol>"
+            +'<div><img src="/m/static/css/browser_detects.png" alt="兼容性图片"></div>'
+        div.innerHTML = x_div;
+        div.className = 'compatible';
+        document.body.appendChild(div);
+      }</script><script src=/m/static/tinymce4.7.5/tinymce.min.js></script><script src=/m/static/js/THREE.v56.min.js></script><div id=app></div><script type=text/javascript src=/m/static/js/manifest.428bb457b2c837af910e.js></script><script type=text/javascript src=/m/static/js/vendor.ac63bb0a11cf8bc04832.js></script><script type=text/javascript src=/m/static/js/app.9ee45402263bb1e8c064.js></script><script type=text/javascript src=/m/static/js/silent_renew.9a16e37af0d2945637a8.js></script><script type=text/javascript src=/m/static/js/popup.ecbfb9ce13bf1e656c92.js></script><script type=text/javascript src=/m/static/js/signin_cb.0f2e9dc06a7fe86d88b8.js></script></body></html><style>.compatible b{
+    color:#1d7690;
+    font-size:16px
+  }
+  .compatible a{
+    color:royalblue;
+    text-decoration: underline;
+  }
+  b.b-danger{
+    color:#ff00ff;
+  }</style>
